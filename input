@@ -1,0 +1,33 @@
+A simple paragraph.
+
+Followed by another.
+
+I spoke.
+And none replied
+I am <b>very</b> serious
+h1. Header 1
+h2. Header 2
+h3. Header 3
+bq. quotable quotes
+This is covered elsewhere [23]
+fn23. Down here infact
+I _believe_ every word
+And then she *fell*
+I __know__
+I **really** __know__
+??Cat's Cradle?? by Vonegaut
+use @5.times do 
+puts 'Ruby' 
+end@
+This was -deleted- today
+This was +inserted+ today
+a ^2^ + b ^2^ = c ^2^
+log~10~5
+I'm %unaware% of most softdrinks
+I'm %{color:red}unaware% of most softdrinks
+p(example1#bigred). big red here
+p. An example
+p(example1). An example
+p(#red). red here
+p{color:blue;margin:30px}. An example
+p[fr]. rouge
