@@ -57,4 +57,10 @@ list3
 ## two
 ## three
 # four
+table1
+|_. name |_. age |_. sex |
+| john | 20 | M | 
+| Diane | 25 | F |
+| Batman | 30 | M |
 textile is awesome
+Ruby is awesome

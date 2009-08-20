@@ -4,6 +4,7 @@ class TextileParser
     input = gsub_lists(input, '#')
     input = gsub_lists(input, '*')
     # tables
+    input = gsub_tables(input)
     # a
     input.gsub!(/"(\w+)":(\S+)/,'<a href="\2">\1</a>')
     # misc
@@ -86,6 +87,38 @@ class TextileParser
       end
     end
     list_out += symbol == '#' ? "</ol>" : "</ul>"
+  end
+  
+  def gsub_tables(input)
+    table = ""
+    new_input = ""
+    input.split("\n").each do |line|
+      if line =~ /^\|/
+        table += line + "\n"
+      else
+        new_input += parse_table(table) unless table.empty?
+        new_input += line + "\n"
+        table = ""
+      end
+    end
+    new_input
+  end
+  
+  def parse_table(table)
+    header = /^\_\./
+    out = "<table>"
+      table.each do |row|
+        out += "<tr>"
+        row.split('|').reject {|t| t.chomp.empty?}.each do |cell|
+          if cell =~ header
+            out += "<th>#{cell.sub(header,'')}</th>"
+          else
+            out += "<td>#{cell}</td>"
+          end
+        end
+        out += "</tr>"
+      end
+    out += "</table>"
   end
 end
 
