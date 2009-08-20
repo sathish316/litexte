@@ -31,3 +31,30 @@ p(example1). An example
 p(#red). red here
 p{color:blue;margin:30px}. An example
 p[fr]. rouge
+p<. align left
+p>. align right
+p=. centered
+p<>. justified
+"Ruby":http://www.ruby-lang.org/doc/api 
+!http://www.google.com/google.jpg!
+list1
+# Fuel could be:
+## Coal
+## Gasoline
+## Electricity
+# Humans need only:
+## Water
+## Protein
+list2
+* Destruction could be:
+** Nuclear
+** Nitro
+* Humans need only:
+** Bombs
+** Petrol
+list3
+# one
+## two
+## three
+# four
+textile is awesome
